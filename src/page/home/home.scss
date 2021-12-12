@@ -1,0 +1,15 @@
+.home-sidebar {
+  transition: all 1s linear;
+}
+
+.home-container {
+  padding-left: var(--sidebar-left-width);
+  padding-top: var(--header-nav-height);
+  height: 100vh;
+}
+
+@media screen and (max-width: 1028px) {
+  .home-container {
+    padding-left: 0;
+  }
+}

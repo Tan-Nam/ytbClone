@@ -1,0 +1,19 @@
+.mySwiper {
+  animation: slide 2s linear infinite alternate;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: -200px;
+  }
+  100% {
+    margin-left: -500px;
+  }
+}

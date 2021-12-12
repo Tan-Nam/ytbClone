@@ -1,0 +1,14 @@
+.watch-container {
+  margin-left: var(--sidebar-left-width);
+  margin-top: var(--header-nav-height);
+
+  .watch-sidebar {
+    transition: all 0.2s linear;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  .watch-container {
+    margin-left: 0;
+  }
+}

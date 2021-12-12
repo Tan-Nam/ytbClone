@@ -1,0 +1,11 @@
+.video-grid-header {
+  padding-bottom: var(--spacing-unit-md);
+  padding-top: var(--spacing-unit-sm);
+  padding-left: var(--spacing-unit-sm);
+  min-height: 60px;
+
+  .title {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+  }
+}

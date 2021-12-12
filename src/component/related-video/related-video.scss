@@ -1,0 +1,6 @@
+.related-video {
+  display: grid;
+  grid-row-gap: var(--spacing-unit-xs);
+  margin-bottom: var(--spacing-unit-md);
+  overflow: auto;
+}

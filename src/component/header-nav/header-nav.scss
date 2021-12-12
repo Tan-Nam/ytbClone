@@ -1,0 +1,26 @@
+.header-nav {
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+
+  i {
+    cursor: pointer;
+  }
+
+  .nav-center {
+    flex-grow: 1;
+    padding: 0;
+    justify-content: center;
+
+    .search-input {
+      width: 500px;
+      padding: 0;
+
+      form {
+        width: 100%;
+      }
+    }
+  }
+}

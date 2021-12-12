@@ -1,0 +1,20 @@
+.home-content {
+  display: grid;
+  grid: auto auto / 1fr;
+  justify-items: center;
+
+  .home-content__list {
+    min-height: 720px;
+    grid-template-rows: 1;
+
+    .loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+  }
+
+  .pagination-container {
+    grid-row-start: 2;
+  }
+}

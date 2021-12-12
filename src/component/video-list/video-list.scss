@@ -1,0 +1,8 @@
+.video-list {
+  display: grid;
+  grid: auto / auto;
+  padding-left: 10rem;
+  padding-top: var(--spacing-unit-md);
+  grid-row-gap: var(--spacing-unit-xs);
+  max-width: 1200px;
+}

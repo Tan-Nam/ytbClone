@@ -1,0 +1,23 @@
+.comment {
+  display: flex;
+  margin: var(--spacing-unit-xs) 0;
+
+  .user-image {
+    width: var(--avatar-diameter);
+    height: var(--avatar-diameter);
+    margin-right: var(--avatar-margin);
+    flex-shrink: 0;
+  }
+
+  .user-name {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 4px;
+    overflow: hidden;
+  }
+  .comment-actions {
+    margin-top: 4px;
+    button {
+      margin-left: var(--spacing-unit-xs);
+    }
+  }
+}

@@ -1,0 +1,169 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  animation: modalAnimation 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  .modal {
+    z-index: 100;
+    background: white;
+    position: relative;
+    margin: 1.75rem auto;
+    border-radius: 3px;
+    max-width: 500px;
+    padding: 2rem;
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+
+      .modal-header__title {
+        font-weight: var(--font-size-large);
+      }
+
+      .modal-close-button {
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        opacity: 0.3;
+        cursor: pointer;
+        border: none;
+      }
+
+      button {
+        font-size: 0.9rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 3px;
+        padding: 0.3rem 1rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .add-form {
+        width: 100%;
+        padding-top: 3rem;
+        border-radius: 1rem;
+
+        .form__div {
+          position: relative;
+          height: 48px;
+
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
+
+          .form__input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: var(--font-size-small);
+            border: 1px solid var(--default-border);
+            border-radius: 0.5rem;
+            outline: none;
+            padding: 1rem;
+            background: none;
+            z-index: 1;
+          }
+
+          .invalid {
+            border: 2px solid var(--error-color);
+          }
+
+          .form__label {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            padding: 0 0.25rem;
+            background-color: #fff;
+            color: var(--input-color);
+            font-size: var(--font-size-small);
+            transition: 0.3s;
+          }
+
+          /*Input focus move up label*/
+          .form__input:focus + .form__label {
+            top: -0.5rem;
+            left: 0.8rem;
+            color: var(--light-theme-tertiary-color);
+            font-size: var(--font-size-small);
+            font-weight: 500;
+            z-index: 10;
+          }
+
+          /*Input focus sticky top label*/
+          .form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+            top: -0.5rem;
+            left: 0.8rem;
+            font-size: var(--font-size-small);
+            font-weight: 500;
+            z-index: 10;
+          }
+
+          /*Input focus*/
+          .form__input:focus {
+            border: 1.5px solid var(--light-theme-tertiary-color);
+          }
+        }
+
+        .form__button {
+          display: block;
+          margin-left: auto;
+          padding: 0.75rem 2rem;
+          outline: none;
+          border: none;
+          background-color: var(--light-theme-tertiary-color);
+          color: #fff;
+          font-size: var(--font-size-small);
+          border-radius: 0.5rem;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+          }
+        }
+
+        .disable {
+          cursor: not-allowed;
+          opacity: 30%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes modalAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

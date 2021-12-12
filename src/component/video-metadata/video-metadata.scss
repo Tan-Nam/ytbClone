@@ -1,0 +1,30 @@
+.video-metadata {
+  color: var(--primary-text-color);
+  font-size: var(--font-size-md);
+  width: 100%;
+
+  h3 {
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary-color);
+  }
+
+  .video-stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    .video-actions {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin: 0;
+      }
+
+      & > *:not(:last-child) {
+        margin-right: var(--font-size-sx);
+      }
+    }
+  }
+}
